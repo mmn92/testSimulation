@@ -3,17 +3,17 @@ import numpy as np
 
 ########################################################################
 
-durationOutput1 = "durationOutputTL1.txt"
+durationOutput1 = "durationOutputNoTL1.txt"
 queueOutput1 = "queueOutputTL1.txt"
 
-durationOutput2 = "durationOutputTL2.txt"
-queueOutput2 = "queueOutputTL2.txt"
+durationOutput2 = "durationOutputNoTL2.txt"
+queueOutput2 = "queueOutputNoTL2.txt"
 
-durationOutput3 = "durationOutputTL3.txt"
-queueOutput3 = "queueOutputTL3.txt"
+durationOutput3 = "durationOutputNoTL3.txt"
+queueOutput3 = "queueOutputNoTL3.txt"
 
-durationOutput4 = "durationOutputTL4.txt"
-queueOutput4 = "queueOutputTL4.txt"
+durationOutput4 = "durationOutputNoTL4.txt"
+queueOutput4 = "queueOutputNoTL4.txt"
 
 ########################################################################
 
@@ -65,18 +65,18 @@ m1.append(np.mean(y2))
 m1.append(np.mean(y3))
 m1.append(np.mean(y4))
 
-u1.sort()
-u2.sort()
-u3.sort()
-u4.sort()
+#u1.sort()
+#u2.sort()
+#u3.sort()
+#u4.sort()
 
-y1.sort()
-y2.sort()
-y3.sort()
-y4.sort()
+#y1.sort()
+#y2.sort()
+#y3.sort()
+#y4.sort()
 
 ########################################################################
-
+#Plot trip duration data
 myPlot.figure(1)
 
 #Data1
@@ -91,18 +91,44 @@ myPlot.title("Average 2")
 
 #Data3
 myPlot.subplot(223)
-myPlot.plot(y1)
-myPlot.title("Queue 1")
+myPlot.plot(u3)
+myPlot.title("Average 3")
 
 #Data4
 myPlot.subplot(224)
-myPlot.plot(y2)
-myPlot.title("Queue 2")
+myPlot.plot(u4)
+myPlot.title("Average 4")
 
 myPlot.show()
 
 ########################################################################
+#Plot queue time data
 
+myPlot.figure(2)
+
+#Data1
+myPlot.subplot(221)
+myPlot.plot(y1)
+myPlot.title("Queue 1")
+
+#Data2
+myPlot.subplot(222)
+myPlot.plot(y2)
+myPlot.title("Queue 2")
+
+#Data3
+myPlot.subplot(223)
+myPlot.plot(y3)
+myPlot.title("Queue 3")
+
+#Data4
+myPlot.subplot(224)
+myPlot.plot(y4)
+myPlot.title("Queue 4")
+
+myPlot.show()
+
+#########################################################################
 fp1.close()
 fp2.close()
 fp3.close()
