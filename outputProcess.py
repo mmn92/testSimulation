@@ -4,7 +4,7 @@ import numpy as np
 ########################################################################
 
 durationOutput1 = "durationOutputNoTL1.txt"
-queueOutput1 = "queueOutputTL1.txt"
+queueOutput1 = "queueOutputNoTL1.txt"
 
 durationOutput2 = "durationOutputNoTL2.txt"
 queueOutput2 = "queueOutputNoTL2.txt"
@@ -28,6 +28,10 @@ fp3Q = open(queueOutput3, "r")
 
 fp4 = open(durationOutput4, "r")
 fp4Q = open(queueOutput4, "r")
+
+########################################################################
+
+print("processing data for no traffic lights - scenario 1")
 
 ########################################################################
 
@@ -65,15 +69,10 @@ m1.append(np.mean(y2))
 m1.append(np.mean(y3))
 m1.append(np.mean(y4))
 
-#u1.sort()
-#u2.sort()
-#u3.sort()
-#u4.sort()
-
-#y1.sort()
-#y2.sort()
-#y3.sort()
-#y4.sort()
+print("\nAverage values for\nDuration | Queue\n")
+for mu, my in zip(m0,m1):
+    print(f"{mu:.0f} | {my:.0f}")
+print("Total average:\n  %6.0f" % np.mean(m0), " - ", "%6.0f" % np.mean(m1))
 
 ########################################################################
 #Plot trip duration data
@@ -82,22 +81,22 @@ myPlot.figure(1)
 #Data1
 myPlot.subplot(221)
 myPlot.plot(u1)
-myPlot.title("Average 1")
+myPlot.title("Caminho 1")
 
 #Data2
 myPlot.subplot(222)
 myPlot.plot(u2)
-myPlot.title("Average 2")
+myPlot.title("Caminho 2")
 
 #Data3
 myPlot.subplot(223)
 myPlot.plot(u3)
-myPlot.title("Average 3")
+myPlot.title("Caminho 3")
 
 #Data4
 myPlot.subplot(224)
 myPlot.plot(u4)
-myPlot.title("Average 4")
+myPlot.title("Caminho 4")
 
 myPlot.show()
 
@@ -109,22 +108,22 @@ myPlot.figure(2)
 #Data1
 myPlot.subplot(221)
 myPlot.plot(y1)
-myPlot.title("Queue 1")
+myPlot.title("Caminho 1")
 
 #Data2
 myPlot.subplot(222)
 myPlot.plot(y2)
-myPlot.title("Queue 2")
+myPlot.title("Caminho 2")
 
 #Data3
 myPlot.subplot(223)
 myPlot.plot(y3)
-myPlot.title("Queue 3")
+myPlot.title("Caminho 3")
 
 #Data4
 myPlot.subplot(224)
 myPlot.plot(y4)
-myPlot.title("Queue 4")
+myPlot.title("Caminho 4")
 
 myPlot.show()
 

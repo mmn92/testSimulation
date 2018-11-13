@@ -1,0 +1,25 @@
+resultados
+
+falar mais da CPU (comunicação com internet, possibilidade de feedback por meio de laços...)
+
+falar sobre sistema adaptativo
+
+segurança de se instalar um semáforo?
+
+mudar o titulo
+
+explicar o cruzamento e os caminhos, os parametros dos motoristas
+
+as simulações foram rodadas com os mesmos parametros, portanto a unica diferença entre elas
+
+como o objetivo do sistema é organizar o transito, um tempo de viagem menor representa
+uma melhoria
+
+as simulações foram geradas a partir de um script em python, permitindo o uso do TraCI
+e da logica de adaptação do sistema
+
+os dados foram obtidos por meio de um script em python. os graficos foram gerados utilizando
+o modulo matplotlib
+
+a simulação com dois laços nao ofereceu melhoria significativa para o sistema, pois nao ha
+uma prioridade de caminhos
