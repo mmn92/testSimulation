@@ -1,25 +1,30 @@
-resultados
+----resultados
 
-falar mais da CPU (comunicação com internet, possibilidade de feedback por meio de laços...)
+----falar mais da CPU (comunicação com internet, possibilidade de feedback por meio de laços...)
 
 falar sobre sistema adaptativo
-
-segurança de se instalar um semáforo?
+    utilizar detectores para modificar, em tempo real, os tempos de abertura dos semaforos
+    ciclos, defasagem, onda verde
+    falar do scoot: utiliza cameras e laços (?)
 
 mudar o titulo
 
-explicar o cruzamento e os caminhos, os parametros dos motoristas
+----explicar o cruzamento e os caminhos, os parametros dos motoristas
 
-as simulações foram rodadas com os mesmos parametros, portanto a unica diferença entre elas
+----as simulações foram rodadas com os mesmos parametros, portanto a unica diferença entre elas
 
-como o objetivo do sistema é organizar o transito, um tempo de viagem menor representa
-uma melhoria
+----DETALHAR OS ESTAGIOS
 
-as simulações foram geradas a partir de um script em python, permitindo o uso do TraCI
-e da logica de adaptação do sistema
+----como o objetivo do sistema é organizar o transito, um tempo de viagem menor representa
+    uma melhoria
 
-os dados foram obtidos por meio de um script em python. os graficos foram gerados utilizando
-o modulo matplotlib
+----as simulações foram geradas a partir de um script em python, permitindo o uso do TraCI
+    e da logica de adaptação do sistema
 
-a simulação com dois laços nao ofereceu melhoria significativa para o sistema, pois nao ha
-uma prioridade de caminhos
+----os dados foram obtidos por meio de um script em python. os graficos foram gerados utilizando
+    o modulo matplotlib
+
+----a simulação com dois laços nao ofereceu melhoria significativa para o sistema, pois nao ha
+    uma prioridade de caminhos
+
+Não adianta aumentar a complexidade/custo do sistema para um cenário simples (conclusao)
